@@ -1,4 +1,10 @@
-<h2>Listos</h2>
-<h3>Listos</h3>
-<h4>Listos</h4>
-<p>Listos</p>
+<script>
+	import { Canvas } from '@threlte/core';
+	import Scene from './Scene.svelte';
+</script>
+
+<div class="h-96">
+	<Canvas>
+		<Scene />
+	</Canvas>
+</div>
