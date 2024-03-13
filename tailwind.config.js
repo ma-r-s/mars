@@ -56,7 +56,7 @@ const config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['geist-sans', ...fontFamily.sans]
+				sans: ['-apple-system', 'BlinkMacSystemFont', ...fontFamily.sans]
 			}
 		}
 	}
