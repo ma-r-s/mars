@@ -1,9 +1,9 @@
 <script>
 	import { page } from '$app/stores';
-	$: currPage = $page.url.pathname.split('/')[2];
+	const currPage = $page.url.pathname.split('/')[2];
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { entries } from '../entries.js';
-	$: entry = entries.find((entry) => entry.link === currPage);
+	const entry = entries.find((entry) => entry.link === currPage);
 </script>
 
 <p class="text-2xl font-bold md:text-3xl">{entry.title}</p>
