@@ -16,7 +16,7 @@
 	journey: it walks one kilometer south, then one kilometer east, and finally one kilometer north,
 	only to end up where it started.
 </p>
-<div class="aspect-video overflow-hidden rounded-3xl border-2">
+<div class="aspect-video overflow-hidden rounded-2xl bg-zinc-950">
 	<Canvas>
 		<Scene />
 	</Canvas>
