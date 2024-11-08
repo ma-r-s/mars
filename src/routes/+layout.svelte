@@ -3,11 +3,13 @@
 	import { ModeWatcher } from 'mode-watcher';
 	import { Separator } from '$lib/components/ui/separator/index.js';
 	import Button from '$lib/components/ui/button/button.svelte';
+	/** @type {{children?: import('svelte').Snippet}} */
+	let { children } = $props();
 </script>
 
 <ModeWatcher />
 <div class="mx-auto w-full max-w-2xl p-4 pb-16 pt-6 sm:pb-32 sm:pt-16">
-	<slot />
+	{@render children?.()}
 	<Separator class="my-12" />
 	<div class="flex gap-2">
 		<Button

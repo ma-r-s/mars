@@ -2,9 +2,11 @@
 	import Toggle from '$lib/Toggle.svelte';
 	import { page } from '$app/stores';
 	import { Button } from '$lib/components/ui/button/index.js';
+	/** @type {{children?: import('svelte').Snippet}} */
+	let { children } = $props();
 
 	let pages = ['Miscellaneous', 'Projects', 'Thoughts', 'About'];
-	$: currPage = $page.url.pathname.split('/')[1];
+	let currPage = $derived($page.url.pathname.split('/')[1]);
 </script>
 
 <div class="mb-2 flex items-center justify-between">
@@ -23,4 +25,4 @@
 		</Button>
 	{/each}
 </div>
-<slot />
+{@render children?.()}

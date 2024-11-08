@@ -3,6 +3,8 @@
 	const currPage = $page.url.pathname.split('/')[2];
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { entries } from '../entries.js';
+	/** @type {{children?: import('svelte').Snippet}} */
+	let { children } = $props();
 	const entry = entries.find((entry) => entry.link === currPage);
 </script>
 
@@ -18,5 +20,5 @@
 	</Button>
 </div>
 <div class="prose max-w-none dark:prose-invert">
-	<slot />
+	{@render children?.()}
 </div>
